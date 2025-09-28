@@ -43,12 +43,12 @@
   color: #fff;
 }
 
-.servicesList div a {
+/* .servicesList div a {
   color: #fff;
   text-decoration: none;
-}
+} */
 
-a::after {
+/* a::after {
   content: '';
   width: 0;
   height: 3px;
@@ -58,12 +58,12 @@ a::after {
   bottom: -8px;
   transition: 0.3s ease-in;
   border-radius: 5px;
-}
+} */
 
-a:hover::after {
+/* .servicesList div a:hover::after {
   width: 100%;
-}
+} */
 
 .servicesList div:hover i {
-  color: #fefefe;
+  color: #fff;
 }

@@ -15,7 +15,7 @@ const Services = () => {
               <li>Custom website design & development</li>
               <li>Responsive & mobile-friendly websites</li>
             </p>
-            <a href="#">Learn More</a>
+            {/* <a href="#">Learn More</a> */}
           </div>
           <div>
             <i className="fa-solid fa-crop-simple"></i>
@@ -24,7 +24,7 @@ const Services = () => {
               <li>User-friendly interfaces</li>
               <li>Design system creation</li>
             </p>
-            <a href="#">Learn More</a>
+            {/* <a href="#">Learn More</a> */}
           </div>
           <div>
             <i className="fa-solid fa-camera"></i>
@@ -33,7 +33,7 @@ const Services = () => {
               <li>Nature Photography</li>
               <li>Freelancing</li>
             </p>
-            <a href="#">Learn More</a>
+            {/* <a href="#">Learn More</a> */}
           </div>
         </div>
       </div>

@@ -14,9 +14,10 @@
 
 .workList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
+  padding: 20px;
 }
 
 .work {
@@ -74,6 +75,17 @@
 .work:hover .layer {
   height: 100%;
 }
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto 0;
+  color: #ff7300;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
 @media (max-width: 600px) {
   .workList {
     grid-template-columns: 1fr;

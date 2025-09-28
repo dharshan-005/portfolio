@@ -30,7 +30,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
-        <a href="#" className="btn">See more..</a>
+        <a href="#" className={styles.btn}>See more..</a>
       </div>
     </section>
     </>

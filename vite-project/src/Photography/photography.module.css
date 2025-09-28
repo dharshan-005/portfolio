@@ -1,0 +1,37 @@
+.photography {
+    background-color: black;
+}
+
+.subTitle {
+    margin: 0;
+}
+
+.imageSlider {
+    padding-top: 10px;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, #fff 10% 90%, transparent);
+}
+
+.imageSlider div {
+    display: flex;
+    animation: scroll-left 10s linear infinite;
+}
+
+.imageSlider img {
+    width: 300px;
+    height: 200px;
+    margin: 0 10px;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

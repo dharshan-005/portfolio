@@ -10,36 +10,66 @@ const About = () => {
     <section id="about" className={styles.about}>
       <div className="container">
         <div className={styles.row}>
-          <div className={styles.aboutCol1}>
+          {/* <div className={styles.aboutCol1}>
             <img src={aboutImg} alt="About Dharshan" />
-          </div>
+            </div> */}
           <div className={styles.aboutCol2}>
-            <h1 className={styles.subTitle}>About Me</h1>
-            <p>
-              I am a dedicated and ambitious individual pursuing a B.E. in
+            <h1 className={styles.subTitle}>ABOUT ME</h1>
+            <p className={styles.intro}>
+              I'm <strong>Dharshan VK</strong>. I am a dedicated and ambitious individual pursuing a B.E. in
               Electronics and Communication Engineering (ECE) with a strong
               passion for Web Development...
             </p>
+          </div>
+        </div>
+
+        <div className={styles.infoBox}>
+          <div className={styles.info}>
+            <div className={styles.aboutInfo}>
+              <div className={styles.infoItem}>
+                <img src={aboutImg} alt="Dharshan" />
+              </div>
+              <div className={styles.infoItem}>
+                <p><span>Name: </span>Dharshan VK</p>
+              </div>
+              <div className={styles.infoItem}>
+                <p><span>Birthday: </span>23 September 2004</p>
+              </div>
+              <div className={styles.infoItem}>
+                <p><span>Phone Number: </span>+91 8220856919</p>
+              </div>
+              <div className={styles.infoItem}>
+                <p><span>E-Mail: </span>vkdharshan38@gmail.com</p>
+              </div>
+            </div>
+
+            {/* <div className={styles.tabTitles}>
+              <h3>SKILLS</h3>
+                <div>
+                  <p>Web</p>
+                </div>
+            </div> */}
 
             <div className={styles.tabTitles}>
+              <div className={styles.test}>
               <p className={`${styles.tabLinks} ${activeTab === "skills" ? styles.active : ""}`} onClick={() => setActiveTab("skills")}>
                 <a>Skills</a>
               </p>
+
               <p
                 className={`${styles.tabLinks} ${
                   activeTab === "experience" ? styles.active : ""}`}
                 onClick={() => setActiveTab("experience")}
-              >
-                Experience
+                >Experience
               </p>
+
               <p
                 className={`${styles.tabLinks} ${
                   activeTab === "education" ? styles.active : ""}`}
                 onClick={() => setActiveTab("education")}
-              >
-                Education
+                >Education
               </p>
-            </div>
+              </div>
 
             {activeTab === "skills" && (
               <div className={styles.tabContents}>
@@ -66,6 +96,7 @@ const About = () => {
                 </ul>
               </div>
             )}
+            </div>
           </div>
         </div>
       </div>
