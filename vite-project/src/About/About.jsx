@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import styles from "./about.module.css";
-import aboutImg from "../assets/me1.jpg";
+import aboutImg from "../assets/me2.jpg";
+import pythonIcon from "../assets/python.svg";
+import cssIcon from "../assets/css3.svg";
+import reactIcon from "../assets/atom.svg";
+import htmlIcon from "../assets/html5.svg";
+// import twitterIcon from "../assets/twitter-alt.svg";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("skills");
@@ -8,17 +13,26 @@ const About = () => {
   return (
     <>
     <section id="about" className={styles.about}>
+      <div className={styles.floatingIcons}>
+      <img src={pythonIcon} alt="Python" className={styles.floatPython} />
+      <img src={cssIcon} alt="CSS" className={styles.floatCSS} />
+      <img src={reactIcon} alt="React" className={styles.floatReact} />
+      <img src={htmlIcon} alt="HTML" className={styles.floatHTML} />
+      {/* <img src={twitterIcon} alt="HTML" className={styles.floatX} /> */}
+    </div>
+
       <div className="container">
         <div className={styles.row}>
           {/* <div className={styles.aboutCol1}>
             <img src={aboutImg} alt="About Dharshan" />
             </div> */}
           <div className={styles.aboutCol2}>
-            <h1 className={styles.subTitle}>ABOUT ME</h1>
+            <div className={styles.titleWrapper}>
+              <h1 className={styles.subTitleBack}>ABOUT ME</h1>
+              <h1 className={styles.subTitle}>ABOUT ME</h1>
+            </div>
             <p className={styles.intro}>
-              I'm <strong>Dharshan VK</strong>. I am a dedicated and ambitious individual pursuing a B.E. in
-              Electronics and Communication Engineering (ECE) with a strong
-              passion for Web Development...
+              I'm <strong>Dharshan VK.</strong> Aspiring Software & Product Enthusiast with a strong foundation in web development, UI/UX, and digital innovation. Eager to contribute to end-to-end product lifecycles, from ideation to launch. Motivated to grow in a fast-paced, startup environment while delivering meaningful user experiences.
             </p>
           </div>
         </div>

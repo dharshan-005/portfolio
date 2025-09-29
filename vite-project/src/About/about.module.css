@@ -2,6 +2,47 @@
   padding: 120px 0 70px 0;
   background-color: #000000;
   color: #ababab;
+  position: relative; 
+}
+
+.iconColored {
+  fill: white; /* or #ff7300 */
+  animation: float 8s ease-in-out infinite;
+  opacity: 0.15;
+  width: 70px;
+  height: 70px;
+}
+
+.floatingIcons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; 
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  color: #fff;
+}
+
+.floatingIcons img {
+  color: #fff;
+  position: absolute;
+  opacity: 0.12;
+  width: 70px;
+  height: 70px;
+  animation: float 9s ease-in-out infinite;
+}
+
+.floatPython { top: 15%;  left: 10%;  animation-delay: 0s; }
+.floatCSS    { top: 40%; left: 80%;  animation-delay: 2.5s; }
+.floatReact  { top: 75%; left: 20%;  animation-delay: 5s; }
+.floatHTML   { top: 65%; left: 65%;  animation-delay: 7.5s; }
+/* .floatX { top: 12%;  left: 90%;  animation-delay: 8s; } */
+
+@keyframes float {
+  0%, 100%    { transform: translateY(0) scale(1) rotate(0deg);}
+  35%         { transform: translateY(-22px) scale(1.05) rotate(6deg);}
+  60%         { transform: translateY(8px) scale(0.95)  rotate(-5deg);}
 }
 
 .row {
@@ -16,19 +57,43 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  /* row-gap: 5px; */
+}
+
+.titleWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .subTitle {
+  position: absolute;
   font-size: 32px;
   font-weight: 700;
-  margin: 5px 0 25px;
+  margin: 5px 0 15px;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.subTitleBack {
+  color: #373737;
+  font-size: 70px;
+  position: relative;
+  margin: 0;
+  text-align: center;
 }
 
 .aboutCol2 .intro {
+  width: 900px;
   font-size: 16px;
-  padding: 0px 375px;
+  /* padding: 0px 150px; */
   line-height: 28px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .infoBox {
@@ -45,19 +110,23 @@
   cursor: pointer;
 }
 
-/* .info:hover {
-
-} */
-
 .info img {
   width: 100px;
   height: 100px;
   border-radius: 90px;
   border: 5px solid #fff;
+  /* align-items: center; */
+  /* text-align: center; */
 }
 
 .aboutInfo {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  /* justify-content: center; */
   padding: 10px;
+  line-height: 10px;
+  /* text-align: left; */
 }
 
 .tabTitles {
@@ -111,4 +180,11 @@
 .tabContents ul li span {
   color: #ff7300;
   font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .info {
+    width: 365px;
+    flex-direction: column;
+  }
 }

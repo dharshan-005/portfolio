@@ -7,10 +7,11 @@
   top: 0;
   padding: 25px 0px;
   z-index: 99;
+  background: rgba(20, 20, 20, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   /* overflow: hidden; */
 }
-
-
 
 .logo {
   width: 120px;
@@ -55,20 +56,31 @@ li a:hover::after {
   right: 0;
 }
 
-.menu i {
+.nav i {
   display: none;
 }
 
 @media (max-width: 768px) {
   .menu {
+    display: none;
     position: fixed;
-    top: 0;
-    right: -200px;
-    width: 200px;
-    height: 100vh;
-    background: #111;
+    top: 60px;
+    right: 0;
+    width: 150px;
+    /* height: 100vh; */
+    background: rgba(30, 30, 30, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     flex-direction: column;
-    padding: 60px 20px;
+    padding: 20px;
+    /* overflow: hidden; */
+    z-index: 100;
+  }
+  .nav i {
+    display: inline;
+  }
+  .menu.show {
+    display: flex;
   }
   .menu i {
     display: block;
@@ -85,15 +97,28 @@ li a:hover::after {
   }
 }
 @media (max-width: 400px) {
+  .nav, .menu{
+    position: absolute;
+  }
   .logo {
     width: 80px;
+  }
+  .menu {
+    column-gap: 15px;
   }
   .menu li a {
     font-size: 14px;
   }
 }
 @media (max-width: 350px) {
+  .nav {
+    position: absolute;
+  }
   .logo {
     width: 70px;
+  }
+  .menu {
+    padding: 40px 120px;
+    /* height: auto; */
   }
 } 
