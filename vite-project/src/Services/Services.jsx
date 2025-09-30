@@ -6,7 +6,11 @@ const Services = () => {
     <>
     <section id="services" className={styles.services}>
       <div className="container">
-        <h1 className={styles.subTitle}>My Services</h1>
+        <div className={styles.titleWrapper}>
+          <h1 className={styles.subTitleBack}>MY SERVICES</h1>
+          <h1 className={styles.subTitle}>MY SERVICES</h1>
+        </div>
+        
         <div className={styles.servicesList}>
           <div>
             <i className="fa-solid fa-code"></i>

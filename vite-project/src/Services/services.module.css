@@ -1,15 +1,43 @@
 .services {
-  padding: 50px 0;
+  padding: 120px 0 70px;
   background-color: #000000;
   color: #ababab;
 }
 
-.subTitle {
+.titleWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* .subTitle {
   font-size: 30px;
   font-weight: 600;
   margin: 5px 0 10px;
   display: flex;
   justify-content: center;
+} */
+
+.subTitle {
+  position: absolute;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 5px 0 15px;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.subTitleBack {
+  color: #373737;
+  font-size: 70px;
+  position: relative;
+  margin: 0;
+  text-align: center;
 }
 
 .servicesList {

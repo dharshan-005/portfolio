@@ -129,6 +129,13 @@
   /* text-align: left; */
 }
 
+.lines {
+  background-color: #9c9c9c;
+  width: 2px;
+  height: auto;
+  border-radius: 5px;
+}
+
 .tabTitles {
   display: flex;
   flex-direction: column;
@@ -186,5 +193,19 @@
   .info {
     width: 365px;
     flex-direction: column;
+  }
+
+  .aboutCol2 .intro {
+    width: 500px;
+  }
+}
+@media (max-width: 428px) {
+  .info {
+    width: 365px;
+    flex-direction: column;
+  }
+
+  .aboutCol2 .intro {
+    width: 300px;
   }
 }

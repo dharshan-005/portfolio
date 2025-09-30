@@ -57,12 +57,7 @@ const About = () => {
               </div>
             </div>
 
-            {/* <div className={styles.tabTitles}>
-              <h3>SKILLS</h3>
-                <div>
-                  <p>Web</p>
-                </div>
-            </div> */}
+              <p className={styles.lines}></p>
 
             <div className={styles.tabTitles}>
               <div className={styles.test}>
