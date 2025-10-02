@@ -16,7 +16,10 @@ const Photography = () => {
     <>
     <section id="photography" className={styles.photography}>
       <div className="container">
-      <h2 className={styles.subTitle}>Photography</h2>
+      <div className={styles.titleWrapper}>
+        <h1 className={styles.subTitleBack}>MY GALLERY</h1>
+        <h1 className={styles.subTitle}>MY GALLERY</h1>
+      </div>
       <p className={styles.description}>A showcase of my photography work.</p>
         <div className={styles.imageSlider}>
           <div className={styles.row}>

@@ -5,6 +5,8 @@ import pythonIcon from "../assets/python.svg";
 import cssIcon from "../assets/css3.svg";
 import reactIcon from "../assets/atom.svg";
 import htmlIcon from "../assets/html5.svg";
+import figmaIcon from "../assets/figma (1).svg";
+import jsIcon from "../assets/js (1).svg";
 // import twitterIcon from "../assets/twitter-alt.svg";
 
 const About = () => {
@@ -14,12 +16,13 @@ const About = () => {
     <>
     <section id="about" className={styles.about}>
       <div className={styles.floatingIcons}>
-      <img src={pythonIcon} alt="Python" className={styles.floatPython} />
-      <img src={cssIcon} alt="CSS" className={styles.floatCSS} />
-      <img src={reactIcon} alt="React" className={styles.floatReact} />
-      <img src={htmlIcon} alt="HTML" className={styles.floatHTML} />
-      {/* <img src={twitterIcon} alt="HTML" className={styles.floatX} /> */}
-    </div>
+        <img src={pythonIcon} alt="Python" className={styles.floatPython} />
+        <img src={cssIcon} alt="CSS" className={styles.floatCSS} />
+        <img src={reactIcon} alt="React" className={styles.floatReact} />
+        <img src={htmlIcon} alt="HTML" className={styles.floatHTML} />
+        <img src={figmaIcon} alt="HTML" className={styles.floatFigma} />
+        <img src={jsIcon} alt="HTML" className={styles.floatJS} />
+      </div>
 
       <div className="container">
         <div className={styles.row}>

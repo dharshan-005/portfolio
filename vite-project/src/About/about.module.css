@@ -37,7 +37,8 @@
 .floatCSS    { top: 40%; left: 80%;  animation-delay: 2.5s; }
 .floatReact  { top: 75%; left: 20%;  animation-delay: 5s; }
 .floatHTML   { top: 65%; left: 65%;  animation-delay: 7.5s; }
-/* .floatX { top: 12%;  left: 90%;  animation-delay: 8s; } */
+.floatFigma { top: 12%;  left: 90%;  animation-delay: 8s; }
+.floatJS { top: 52%;  left: 10%;  animation-delay: 8s; }
 
 @keyframes float {
   0%, 100%    { transform: translateY(0) scale(1) rotate(0deg);}

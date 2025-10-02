@@ -7,6 +7,7 @@ import Projects from './Projects/Projects'
 import Photography from './Photography/Photography'
 import Loading from './Loading/Loading'
 import Banner from './Banner/Banner'
+import Contact from './Contact/Contact'
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -28,7 +29,7 @@ const App = () => {
       <Services />
       <Projects />
       <Photography />
-      <br />
+      <Contact />
     </>
   )
 }
