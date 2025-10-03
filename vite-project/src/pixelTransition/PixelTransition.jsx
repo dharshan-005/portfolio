@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
-import './PixelTransition.css';
+import styles from './PixelTransition.module.css';
 
 function PixelTransition({
   firstContent,
@@ -109,11 +109,11 @@ function PixelTransition({
       onClick={isTouchDevice ? handleClick : undefined}
     >
       <div style={{ paddingTop: aspectRatio }} />
-      <div className="pixelated-image-card__default">{firstContent}</div>
-      <div className="pixelated-image-card__active" ref={activeRef}>
+      <div className={styles.pixelated-image-card__default}>{firstContent}</div>
+      <div className={styles.pixelated-image-card__active} ref={activeRef}>
         {secondContent}
       </div>
-      <div className="pixelated-image-card__pixels" ref={pixelGridRef} />
+      <div className={styles.pixelated-image-card__pixels} ref={pixelGridRef} />
     </div>
   );
 }

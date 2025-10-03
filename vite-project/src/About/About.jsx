@@ -7,7 +7,7 @@ import reactIcon from "../assets/atom.svg";
 import htmlIcon from "../assets/html5.svg";
 import figmaIcon from "../assets/figma (1).svg";
 import jsIcon from "../assets/js (1).svg";
-// import PixelTransition from '../PixelTransition.jsx';
+import PixelTransition from '../pixelTransition/PixelTransition';
 // import twitterIcon from "../assets/twitter-alt.svg";
 
 const About = () => {
@@ -46,7 +46,7 @@ const About = () => {
             <div className={styles.aboutInfo}>
               <div className={styles.infoItem}>
                 <img src={aboutImg} alt="Dharshan" />
-                {/* <PixelTransition
+                <PixelTransition
                   firstContent={
                     <img
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
@@ -71,7 +71,7 @@ const About = () => {
                   pixelColor='#ffffff'
                   animationStepDuration={0.4}
                   className="custom-pixel-card"
-                /> */}
+                />
               </div>
               {/* <div className={styles.infoItem}>
                 <p><span>Name: </span>Dharshan VK</p>
