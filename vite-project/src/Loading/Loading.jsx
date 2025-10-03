@@ -1,12 +1,20 @@
 import React from 'react'
 import styles from './loading.module.css'
+import stickmanVideo from '../assets/stickman_loading.mp4';
+
 
 const Loading = () => {
   return (
     <>
-    <div style={({display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#000000'})}>
+    <div className={styles.loadingWrapper}>
+      <video
+        className={styles.bgVideo}
+        // src={stickmanVideo}
+      />
+      <div className={styles.centerContent}>
         <div className={styles.loader}></div>
         <p className={styles.pText}>Loading...</p>
+      </div>
     </div>
     </>
   )

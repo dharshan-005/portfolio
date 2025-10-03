@@ -20,7 +20,7 @@ const Photography = () => {
         <h1 className={styles.subTitleBack}>MY GALLERY</h1>
         <h1 className={styles.subTitle}>MY GALLERY</h1>
       </div>
-      <p className={styles.description}>A showcase of my photography work.</p>
+      {/* <p className={styles.description}>A showcase of my photography work.</p> */}
         <div className={styles.imageSlider}>
           <div className={styles.row}>
             {[img1, img2, img3, img4, img5, img6, img7, img8, img9, img10].map((src, i) => (

@@ -7,6 +7,7 @@ import reactIcon from "../assets/atom.svg";
 import htmlIcon from "../assets/html5.svg";
 import figmaIcon from "../assets/figma (1).svg";
 import jsIcon from "../assets/js (1).svg";
+// import PixelTransition from '../PixelTransition.jsx';
 // import twitterIcon from "../assets/twitter-alt.svg";
 
 const About = () => {
@@ -45,8 +46,34 @@ const About = () => {
             <div className={styles.aboutInfo}>
               <div className={styles.infoItem}>
                 <img src={aboutImg} alt="Dharshan" />
+                {/* <PixelTransition
+                  firstContent={
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+                      alt="default pixel transition content, a cat!"
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                  }
+                  secondContent={
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        display: "grid",
+                        placeItems: "center",
+                        backgroundColor: "#111"
+                      }}
+                    >
+                      <p style={{ fontWeight: 900, fontSize: "3rem", color: "#ffffff" }}>Meow!</p>
+                    </div>
+                  }
+                  gridSize={12}
+                  pixelColor='#ffffff'
+                  animationStepDuration={0.4}
+                  className="custom-pixel-card"
+                /> */}
               </div>
-              <div className={styles.infoItem}>
+              {/* <div className={styles.infoItem}>
                 <p><span>Name: </span>Dharshan VK</p>
               </div>
               <div className={styles.infoItem}>
@@ -57,10 +84,10 @@ const About = () => {
               </div>
               <div className={styles.infoItem}>
                 <p><span>E-Mail: </span>vkdharshan38@gmail.com</p>
-              </div>
+              </div> */}
             </div>
 
-              <p className={styles.lines}></p>
+            <p className={styles.lines}></p>
 
             <div className={styles.tabTitles}>
               <div className={styles.test}>

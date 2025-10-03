@@ -1,10 +1,40 @@
 // import React from 'react'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./navbar.module.css";
 import logo from "../assets/LOGO6.png";
 
+const sections = ["header", "about", "services", "projects", "photography", "contact"];
+
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+
+    // const [active, setActive] = useState(window.location.hash || "#header")
+
+    // useEffect(() => {
+    //   const onHashChange = () => setActive(window.location.hash || "#header");
+    //   window.addEventListener("hashchange", onhashchange);
+    //   return () => window.removeEventListener("hashchange", onhashchange);
+    const [activeSection, setActiveSection] = useState("header");
+
+    useEffect(() => {
+      const handleScroll = () => {
+        let current = "header";
+        sections.forEach((sectionId) => {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            const { top } = section.getBoundingClientRect();
+            if (top <= window.innerHeight / 2) {
+              current = sectionId;
+            }
+          }
+        });
+        setActiveSection(current);
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      handleScroll(); // Run on mount
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
     
   return (
     <>
@@ -17,12 +47,31 @@ const Navbar = () => {
         )} 
 
         <ul className={`${styles.menu} ${open ? styles.show : ""}`} id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#photography">My Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
+          {sections.map((id) => (
+          <li key={id}>
+            <a href={`#${id}`} className={activeSection === id ? styles.active : ""}>
+              {id.charAt(0).toUpperCase() + id.slice(1)}
+            </a>
+          </li>
+          ))}
+            {/* <li>
+              <a href="#header" className={active === "#header" ? styles.active : ""}>Home</a>
+            </li>
+            <li>
+              <a href="#about" className={active === "#about" ? styles.active : ""}>About</a>
+            </li>
+            <li>
+              <a href="#services" className={active === "#services" ? styles.active : ""}>Services</a>
+            </li>
+            <li>
+              <a href="#projects" className={active === "#projects" ? styles.active : ""}>Projects</a>
+            </li>
+            <li>
+              <a href="#photography" className={active === "#photography" ? styles.active : ""}>My Gallery</a>
+            </li>
+            <li>
+              <a href="#contact" className={active === "#contact" ? styles.active : ""}>Contact</a>
+            </li> */}
             {/* (<i className="fa-solid fa-xmark" onClick={() => setOpen(false)}></i> ) */}
             {/* {open ? (<i className="fa-solid fa-xmark" onClick={() => setOpen(false)}></i> ) : ( <i className="fa-solid fa-bars" onClick={() => setOpen(true)}></i> )} */}
             {open && (

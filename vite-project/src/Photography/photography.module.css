@@ -32,6 +32,11 @@
   text-align: center;
 }
 
+.description {
+    text-align: center;
+    font-size: 25px;
+}
+
 .imageSlider {
     padding-top: 10px;
     display: flex;
