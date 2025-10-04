@@ -40,6 +40,38 @@
   color: #ff7300;
 }
 
+.menu hr {
+  border: 0.5px solid gray;
+  align-self: center;
+  height: 20px;
+  margin: 0;
+}
+
+.resume {
+  border-radius: 5px;
+}
+
+.btn {
+  background: none;
+  color: #ababab;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.resume a:hover {
+  color: #ff7300;
+}
+
 /* li a::after {
     content: '';
     width: 0;
@@ -101,6 +133,9 @@ li a:hover::after {
   }
   .menu li a {
     font-size: 16px;
+  }
+  .menu hr {
+    transform: rotate(90deg);
   }
 }
 @media (max-width: 400px) {

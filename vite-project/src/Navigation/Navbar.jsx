@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import styles from "./navbar.module.css";
 import logo from "../assets/LOGO6.png";
+import resume from "../assets/resume_35.pdf"
 
 const sections = ["header", "about", "services", "projects", "photography", "contact"];
 
@@ -54,6 +55,10 @@ const Navbar = () => {
             </a>
           </li>
           ))}
+          <hr />
+          <div className={styles.resume}>
+            <button className={styles.btn}><a href={resume} >Resume</a></button>
+          </div>
             {/* <li>
               <a href="#header" className={active === "#header" ? styles.active : ""}>Home</a>
             </li>

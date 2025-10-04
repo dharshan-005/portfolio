@@ -156,6 +156,14 @@
   height: 0;
 }
 
+.tabLinks.active {
+  color: #ff7300;
+}
+
+.tabLinks:hover:not(.active) {
+  color: #ff7300;
+}
+
 .tabLinks::after {
   content: '';
   width: 0;

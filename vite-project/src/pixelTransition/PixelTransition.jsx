@@ -31,7 +31,7 @@ function PixelTransition({
     for (let row = 0; row < gridSize; row++) {
       for (let col = 0; col < gridSize; col++) {
         const pixel = document.createElement('div');
-        pixel.classList.add('pixelated-image-card__pixel');
+        pixel.classList.add(styles.pixelatedImageCardPixel);
         pixel.style.backgroundColor = pixelColor;
 
         const size = 100 / gridSize;
@@ -42,16 +42,16 @@ function PixelTransition({
         pixelGridEl.appendChild(pixel);
       }
     }
-  }, [gridSize, pixelColor]);
+  }, [gridSize, pixelColor, styles.pixelatedImageCardPixel]);
 
-  const animatePixels = activate => {
+  const animatePixels = (activate) => {
     setIsActive(activate);
 
     const pixelGridEl = pixelGridRef.current;
     const activeEl = activeRef.current;
     if (!pixelGridEl || !activeEl) return;
 
-    const pixels = pixelGridEl.querySelectorAll('.pixelated-image-card__pixel');
+    const pixels = pixelGridEl.querySelectorAll(`.${styles.pixelatedImageCardPixel}`);
     if (!pixels.length) return;
 
     gsap.killTweensOf(pixels);
@@ -92,9 +92,11 @@ function PixelTransition({
   const handleMouseEnter = () => {
     if (!isActive) animatePixels(true);
   };
+
   const handleMouseLeave = () => {
     if (isActive) animatePixels(false);
   };
+
   const handleClick = () => {
     animatePixels(!isActive);
   };
@@ -102,18 +104,18 @@ function PixelTransition({
   return (
     <div
       ref={containerRef}
-      className={`pixelated-image-card ${className}`}
+      className={`${styles.pixelatedImageCard} ${className}`}
       style={style}
       onMouseEnter={!isTouchDevice ? handleMouseEnter : undefined}
       onMouseLeave={!isTouchDevice ? handleMouseLeave : undefined}
       onClick={isTouchDevice ? handleClick : undefined}
     >
       <div style={{ paddingTop: aspectRatio }} />
-      <div className={styles.pixelated-image-card__default}>{firstContent}</div>
-      <div className={styles.pixelated-image-card__active} ref={activeRef}>
+      <div className={styles.pixelatedImageCardDefault}>{firstContent}</div>
+      <div className={styles.pixelatedImageCardActive} ref={activeRef}>
         {secondContent}
       </div>
-      <div className={styles.pixelated-image-card__pixels} ref={pixelGridRef} />
+      <div className={styles.pixelatedImageCardPixels} ref={pixelGridRef} />
     </div>
   );
 }

@@ -11,7 +11,22 @@ const Contact = () => {
                 <h1 className={styles.subTitleBack}>CONTACT</h1>
                 <h1 className={styles.subTitle}>CONTACT</h1>
             </div>
-            <div>
+            <div className={styles.root}>
+              <div className={styles.contactContainerLeft}>
+                {/* <h1 className={styles.subTitle}>Contact Me</h1> */}
+                <p><i class="fa-solid fa-at"></i> vkdharshan38@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 8220856919</p>
+                <br />
+                <div className={styles.socialIcons}>
+                  <a href="https://www.linkedin.com/in/dharshan-vk/"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://www.instagram.com/dharshan___05/"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://canary.discord.com/channels/@me"><i class="fa-brands fa-discord"></i></a>
+                  <a href="https://github.com/dharshan-005"><i class="fa-brands fa-github"></i></a>
+                </div>
+                {/* <a href="images/@sample_resume.pdf" download class="btn btn2">Resume</a> */}
+              </div>
+
               <div className={styles.contactContainer}>
                 <form action="https://api.web3forms.com/submit" method="POST" className={styles.contactLeft}>
                     <div className={styles.contactLeftTitle}>

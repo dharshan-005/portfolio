@@ -32,12 +32,64 @@
   text-align: center;
 }
 
-.contactContainer {
-    height: 100vh;
+.root {
+    width: 100%;
+    /* height: 600px; */
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    margin-left: 50px;
-    /* align-items: center; */
-    /* justify-content: space-evenly; */
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* .contactContainerLeft {
+    flex-basis: 20%;
+} */
+
+/* .contactContainerRight {
+    flex-basis: 20%;
+} */
+
+.contactContainerLeft p {
+    margin-top: 30px;
+}
+
+.contactContainerLeft p i {
+    color: #ff7300;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.socialIcons {
+    margin-top: 30px;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.socialIcons a:hover {
+    color: #ff7300;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: #ff7300;
+}
+
+.contactContainer {
+    /* height: 100vh; */
+    display: flex;
+    /* margin-left: 50px; */
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .contactLeft {
@@ -45,6 +97,7 @@
     flex-direction: column;
     align-items: start;
     gap: 20px;
+    /* height: 600px; */
 }
 
 .contactLeft button {

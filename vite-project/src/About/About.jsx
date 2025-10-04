@@ -45,13 +45,13 @@ const About = () => {
           <div className={styles.info}>
             <div className={styles.aboutInfo}>
               <div className={styles.infoItem}>
-                <img src={aboutImg} alt="Dharshan" />
+                {/* <img src={aboutImg} alt="Dharshan" /> */}
                 <PixelTransition
                   firstContent={
                     <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
-                      alt="default pixel transition content, a cat!"
-                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      src={aboutImg}
+                      alt="Dharshan"
+                      style={{ width: "100%", height: '100%', objectFit: "cover" }}
                     />
                   }
                   secondContent={
@@ -64,27 +64,28 @@ const About = () => {
                         backgroundColor: "#111"
                       }}
                     >
-                      <p style={{ fontWeight: 900, fontSize: "3rem", color: "#ffffff" }}>Meow!</p>
+                      {/* <p style={{ fontWeight: 900, fontSize: "12px", color: "#ffffff" }}>Dharshan</p>
+                      <p style={{ fontWeight: 900, fontSize: "12px", color: "#ffffff" }}>vkdharshan38@gmail.com</p> */}
+                      <div className={styles.infoItem}>
+                        <p><span>Name: </span>Dharshan VK</p>
+                      </div>
+                      <div className={styles.infoItem}>
+                        <p><span>Birthday: </span>23 September 2004</p>
+                      </div>
+                      <div className={styles.infoItem}>
+                        <p><span>Phone Number: </span>+91 8220856919</p>
+                      </div>
+                      <div className={styles.infoItem}>
+                        <p><span>E-Mail: </span>vkdharshan38@gmail.com</p>
+                      </div>
                     </div>
                   }
                   gridSize={12}
-                  pixelColor='#ffffff'
+                  pixelColor='#ffffffff'
                   animationStepDuration={0.4}
-                  className="custom-pixel-card"
+                  className={styles.custompixelcard}
                 />
               </div>
-              {/* <div className={styles.infoItem}>
-                <p><span>Name: </span>Dharshan VK</p>
-              </div>
-              <div className={styles.infoItem}>
-                <p><span>Birthday: </span>23 September 2004</p>
-              </div>
-              <div className={styles.infoItem}>
-                <p><span>Phone Number: </span>+91 8220856919</p>
-              </div>
-              <div className={styles.infoItem}>
-                <p><span>E-Mail: </span>vkdharshan38@gmail.com</p>
-              </div> */}
             </div>
 
             <p className={styles.lines}></p>
