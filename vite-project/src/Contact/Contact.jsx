@@ -12,6 +12,20 @@ const Contact = () => {
                 <h1 className={styles.subTitle}>CONTACT</h1>
             </div>
             <div className={styles.root}>
+              <div className={styles.contactContainer}>
+                <form action="https://api.web3forms.com/submit" method="POST" className={styles.contactLeft}>
+                    <div className={styles.contactLeftTitle}>
+                        <h2>Get in touch</h2>
+                        <hr />
+                    </div>
+                    <input type="hidden" name="access_key" value="60daffcf-8ee5-4e15-aba2-8c1f3576816f" />
+                    <input type="text" name="name" placeholder="Your Name" className={styles.contactInputs} required />
+                    <input type="email" name="email" placeholder="Your Email" className={styles.contactInputs} required />
+                    <textarea name="message" placeholder="Leave Your Message Here" className={styles.contactInputs} required></textarea>
+                    <button type="submit">Submit <img src={arrowImage} alt="->" /></button>
+                </form>
+              </div>
+              
               <div className={styles.contactContainerLeft}>
                 {/* <h1 className={styles.subTitle}>Contact Me</h1> */}
                 <p><i class="fa-solid fa-at"></i> vkdharshan38@gmail.com</p>
@@ -25,20 +39,6 @@ const Contact = () => {
                   <a href="https://github.com/dharshan-005"><i class="fa-brands fa-github"></i></a>
                 </div>
                 {/* <a href="images/@sample_resume.pdf" download class="btn btn2">Resume</a> */}
-              </div>
-
-              <div className={styles.contactContainer}>
-                <form action="https://api.web3forms.com/submit" method="POST" className={styles.contactLeft}>
-                    <div className={styles.contactLeftTitle}>
-                        <h2>Get in touch</h2>
-                        <hr />
-                    </div>
-                    <input type="hidden" name="access_key" value="60daffcf-8ee5-4e15-aba2-8c1f3576816f" />
-                    <input type="text" name="name" placeholder="Your Name" className={styles.contactInputs} required />
-                    <input type="email" name="email" placeholder="Your Email" className={styles.contactInputs} required />
-                    <textarea name="message" placeholder="Leave Your Message Here" className={styles.contactInputs} required></textarea>
-                    <button type="submit">Submit <img src={arrowImage} alt="->" /></button>
-                </form>
               </div>
             </div>
         </div>

@@ -199,6 +199,34 @@
 }
 
 @media (max-width: 768px) {
+  .floatingIcons img {
+    width: 10vw; /* slightly larger to remain visible */
+  }
+  .floatPython {
+    top: 10%;
+    left: 5%;
+  }
+  .floatCSS {
+    top: 35%;
+    left: 75%;
+  }
+  .floatReact {
+    top: 70%;
+    left: 15%;
+  }
+  .floatHTML {
+    top: 60%;
+    left: 55%;
+  }
+  .floatFigma {
+    top: 10%;
+    left: 80%;
+  }
+  .floatJS {
+    top: 45%;
+    left: 5%;
+  }
+  
   .info {
     width: 365px;
     flex-direction: column;

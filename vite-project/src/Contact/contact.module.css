@@ -159,10 +159,15 @@
 }
 
 @media (max-width: 768px) {
-  .contactContainer {
-    display: flex;
-    justify-content: center;
-  }
+    .root {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+    .contactContainer {
+        flex-direction: column;
+        gap: 50px;
+    }
 }
 
 @media (max-width: 427px) {
