@@ -1,0 +1,125 @@
+.projects {
+  padding: 120px 0 70px 0;
+  background-color: #000000;
+  color: #ababab;
+}
+
+.titleWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.subTitle {
+  position: absolute;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 5px 0 15px;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.subTitleBack {
+  color: #373737;
+  font-size: 70px;
+  position: relative;
+  margin: 0;
+  text-align: center;
+}
+
+/* .subTitle {
+  font-size: 30px;
+  font-weight: 600;
+  color: #ababab;
+  margin: 5 0 10px;
+  display: flex;
+  justify-content: center;
+} */
+
+.workList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), #ff7300);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.layer a {
+  margin-top: 5px;
+  color: #ff7300;
+  font-size: 18px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto 0;
+  color: #ff7300;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+  .workList {
+    grid-template-columns: 1fr;
+  }
+  .projects {
+    padding: 90px 0 70px 0;
+  }
+}

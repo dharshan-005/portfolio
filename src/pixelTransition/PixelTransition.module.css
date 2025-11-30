@@ -1,0 +1,41 @@
+.pixelatedImageCard {
+  background-color: #222;
+  color: var(--color-primary, #fff);
+  border-radius: 30px;
+  border: 3px solid #fff;
+  width: 300px;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 265px;
+}
+
+.pixelatedImageCardDefault,
+.pixelatedImageCardActive,
+.pixelatedImageCardPixels {
+  width: 100%;
+  height: 265px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pixelatedImageCardActive {
+  z-index: 2;
+  display: none;
+}
+
+.pixelatedImageCardPixels {
+  pointer-events: none;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pixelatedImageCardPixel {
+  display: none;
+  position: absolute;
+}

@@ -1,0 +1,266 @@
+.about {
+  padding: 120px 0 70px 0;
+  background-color: #000000;
+  color: #ababab;
+  position: relative; 
+}
+
+.iconColored {
+  fill: white; /* or #ff7300 */
+  animation: float 8s ease-in-out infinite;
+  opacity: 0.15;
+  width: 70px;
+  height: 70px;
+}
+
+.floatingIcons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; 
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  color: #fff;
+}
+
+.floatingIcons img {
+  color: #fff;
+  position: absolute;
+  opacity: 0.12;
+  width: 70px;
+  height: 70px;
+  animation: float 9s ease-in-out infinite;
+}
+
+.floatPython { top: 15%;  left: 10%;  animation-delay: 0s; }
+.floatCSS    { top: 40%; left: 80%;  animation-delay: 2.5s; }
+.floatReact  { top: 75%; left: 20%;  animation-delay: 5s; }
+.floatHTML   { top: 65%; left: 65%;  animation-delay: 7.5s; }
+.floatFigma { top: 12%;  left: 90%;  animation-delay: 8s; }
+.floatJS { top: 52%;  left: 10%;  animation-delay: 8s; }
+
+@keyframes float {
+  0%, 100%    { transform: translateY(0) scale(1) rotate(0deg);}
+  35%         { transform: translateY(-22px) scale(1.05) rotate(6deg);}
+  60%         { transform: translateY(8px) scale(0.95)  rotate(-5deg);}
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.aboutCol2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  /* row-gap: 5px; */
+}
+
+.titleWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.subTitle {
+  position: absolute;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 5px 0 15px;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.subTitleBack {
+  color: #373737;
+  font-size: 70px;
+  position: relative;
+  margin: 0;
+  text-align: center;
+}
+
+.aboutCol2 .intro {
+  width: 900px;
+  font-size: 16px;
+  /* padding: 0px 150px; */
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.infoBox {
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  width: 900px;
+  background-color: rgb(17, 17, 17);
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.info img {
+  width: 200px;
+  height: 265px;
+  border-radius: 30px;
+  border: 3px solid #fff;
+  /* align-items: center; */
+  /* text-align: center; */
+}
+
+.aboutInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* justify-content: center; */
+  padding: 10px;
+  line-height: 10px;
+  /* text-align: left; */
+}
+
+.lines {
+  background-color: #9c9c9c;
+  width: 2px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.tabTitles {
+  display: flex;
+  flex-direction: column;
+}
+
+.test {
+  display: flex;
+  margin: 10px 0 20px;
+}
+
+.tabLinks {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  height: 0;
+}
+
+.tabLinks.active {
+  color: #ff7300;
+}
+
+.tabLinks:hover:not(.active) {
+  color: #ff7300;
+}
+
+.tabLinks::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff7300;
+  position: absolute;
+  left: 0;
+  bottom: -28px;
+  transition: 0.3s ease-in;
+  border-radius: 5px;
+}
+
+.tabLinks:hover::after {
+  width: 100%;
+}
+
+.tabContents {
+  display: flex;
+}
+
+.activeTab {
+  display: block;
+}
+
+.tabContents ul {
+  margin: 0px;
+  padding: 0px 0px 0px 15px;
+}
+
+.tabContents ul li span {
+  color: #ff7300;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .floatingIcons img {
+    width: 10vw; /* slightly larger to remain visible */
+  }
+  .floatPython {
+    top: 10%;
+    left: 5%;
+  }
+  .floatCSS {
+    top: 35%;
+    left: 75%;
+  }
+  .floatReact {
+    top: 70%;
+    left: 15%;
+  }
+  .floatHTML {
+    top: 60%;
+    left: 55%;
+  }
+  .floatFigma {
+    top: 10%;
+    left: 80%;
+  }
+  .floatJS {
+    top: 45%;
+    left: 5%;
+  }
+  
+  .info {
+    width: 365px;
+    flex-direction: column;
+  }
+
+  .aboutCol2 .intro {
+    width: 500px;
+  }
+
+  .subTitleBack {
+    font-size: 50px;
+  }
+
+  .subTitle {
+    font-size: 30px;
+  }
+  
+}
+@media (max-width: 428px) {
+  .info {
+    width: 365px;
+    flex-direction: column;
+    padding: 20px 15px 30px 15px;
+  }
+  
+  .aboutCol2 .intro {
+    width: 300px;
+  }
+
+  .subTitleBack {
+    font-size: 50px;
+  }
+  
+  .subTitle {
+    font-size: 30px;
+  }
+}

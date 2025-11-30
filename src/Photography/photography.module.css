@@ -1,0 +1,68 @@
+.photography {
+    padding: 120px 0 70px 0;
+    background-color: black;
+    color: #ababab;
+}
+
+.titleWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.subTitle {
+  position: absolute;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 5px 0 15px;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.subTitleBack {
+  color: #373737;
+  font-size: 70px;
+  position: relative;
+  margin: 0;
+  text-align: center;
+}
+
+.description {
+    text-align: center;
+    font-size: 25px;
+}
+
+.imageSlider {
+    padding-top: 10px;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, #fff 10% 90%, transparent);
+}
+
+.imageSlider div {
+    display: flex;
+    animation: scroll-left 10s linear infinite;
+}
+
+.imageSlider img {
+    width: 300px;
+    height: 200px;
+    margin: 0 10px;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
