@@ -4,17 +4,17 @@ import styles from "./navbar.module.css";
 import logo from "../assets/logo.png";
 import resume from "../assets/resume_35.pdf"
 
-const sections = ["header", "about", "services", "projects", "contact"];
+const sections = ["home", "about", "services", "projects", "contact"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-   const [activeSection, setActiveSection] = useState("header");
+   const [activeSection, setActiveSection] = useState("home");
 
 
   useEffect(() => {
     const handleScroll = () => {
-      let current = "header";
+      let current = "home";
       sections.forEach((sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
