@@ -119,6 +119,11 @@ li a:hover::after {
     flex-direction: column;
     padding: 20px;
     z-index: 99;
+    justify-content: center;
+  }
+
+  .menu hr {
+    display: none;
   }
 
   .nav i {
