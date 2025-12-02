@@ -122,4 +122,8 @@
   .projects {
     padding: 90px 0 70px 0;
   }
+  .work {
+    box-shadow: 0 0 15px rgba(100, 100, 100, 0.562); /* Orange soft glow */
+    border-radius: 12px;
+  }
 }
