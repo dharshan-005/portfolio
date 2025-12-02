@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "./navbar.module.css";
 import logo from "../assets/logo.png";
-import resume from "../assets/resume_35.pdf";
+// import resume from "../assets/resume_35.pdf";
+import resume from "../assets/Resume.pdf"
 
 const sections = ["home", "about", "services", "projects", "contact"];
 
@@ -72,11 +73,11 @@ const Navbar = () => {
         <hr />
 
         {/* RESUME BUTTON */}
-        <div className={styles.resume}>
+        <li className={styles.resume}>
           <button className={styles.btn}>
             <a href={resume}>Resume</a>
           </button>
-        </div>
+        </li>
 
         {/* CLOSE ICON */}
         {open && (

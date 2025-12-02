@@ -11,16 +11,16 @@ import Contact from './Contact/Contact'
 import Footer from './Footer/Footer'
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true)
+  // const [isLoading, setIsLoading] = useState(true)
 
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 3000)
-    return () => clearTimeout(timer)
-  }, [])
+  // useEffect(() => {
+  //   const timer = setTimeout(() => setIsLoading(false), 3000)
+  //   return () => clearTimeout(timer)
+  // }, [])
 
-  if (isLoading) {
-    return <Loading />
-  }
+  // if (isLoading) {
+  //   return <Loading />
+  // }
 
   return (
     <>

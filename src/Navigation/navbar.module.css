@@ -119,6 +119,7 @@ li a:hover::after {
     flex-direction: column;
     padding: 20px;
     z-index: 99;
+    align-items: center;
     justify-content: center;
   }
 
@@ -136,6 +137,7 @@ li a:hover::after {
     gap: 25px;
     padding-top: 20px;
     align-items: center;
+    justify-content: center;
   }
 
   .menu i {
