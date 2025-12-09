@@ -16,8 +16,8 @@ const Navbar = () => {
       sections.forEach((sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
-          const { top } = section.getBoundingClientRect();
-          if (top <= window.innerHeight / 2) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
             current = sectionId;
           }
         }
