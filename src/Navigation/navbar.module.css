@@ -11,16 +11,29 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
+  position: relative;
   width: 100%;
-  height: 50px;
-  top: 0;
+  height: 25px;
   padding: 25px 0px;
   z-index: 99;
-  background: rgba(20, 20, 20, 0.5);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  overflow: visible;
+  /* background: rgb(20, 20, 20); */
+  transition: all 0.3s ease;
+}
+
+.sticky {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  background-color: black;
+  border: #ababab 1px solid;
+
+  width: calc(100% - 40px);
+
+  border-radius: 30px;
+
+  box-shadow: 0 4px 20px rgb(0, 0, 0);
+  transition: all 0.3s ease;
+  z-index: 999;
 }
 
 .logo {
@@ -59,6 +72,11 @@
 
 .resume {
   border-radius: 5px;
+  display: inline;
+}
+
+.cv {
+  display: none;
 }
 
 .btn {
@@ -114,17 +132,18 @@ li a:hover::after {
     right: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
     z-index: 99;
     align-items: center;
     justify-content: center;
   }
 
   .menu hr {
-    display: none;
+    width: 25px;
+    height: 2px;
+    background-color: #ff7300;
+    border: none;
   }
 
   .nav i {
@@ -140,10 +159,35 @@ li a:hover::after {
     justify-content: center;
   }
 
-  .menu i {
-    display: block;
-    margin-top: 20px;
-    cursor: pointer;
+  .menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .brand {
+    /* z-index: 100; */
+    display: none;
+  }
+
+  .resumeDesktop {
+    display: none;
+  }
+
+  .cv {
+    display: inline;
+  }
+
+  /* .resume{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+
+  .btn a {
+    font-size: 18px;
   }
 }
 

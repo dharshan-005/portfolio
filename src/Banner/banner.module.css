@@ -16,11 +16,13 @@
 }
 
 .headerText {
+  position: relative;
+  top: -15%;
+  left: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding-top: 250px; */
 }
 
 .header h1 {

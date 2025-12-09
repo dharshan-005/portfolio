@@ -10,6 +10,8 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
+  const [isSticky, setIsSticky] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       let current = "home";
@@ -23,6 +25,7 @@ const Navbar = () => {
         }
       });
       setActiveSection(current);
+      setIsSticky(window.scrollY > 1);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -31,7 +34,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={styles.nav}>
+    <nav className={`${isSticky ? styles.sticky: ""} ${styles.nav}`}>
       {/* LOGO */}
       <a className={styles.brand} href="#">
         <img src={logo} alt="Logo" className={styles.logo} />
@@ -75,7 +78,10 @@ const Navbar = () => {
         {/* RESUME BUTTON */}
         <li className={styles.resume}>
           <button className={styles.btn}>
-            <a href={resume}>Resume</a>
+            <a href={resume}>
+              <span className={styles.resumeDesktop}>Resume</span>
+              <span className={styles.cv}>CV</span>
+            </a>
           </button>
         </li>
 
